@@ -16,12 +16,24 @@
         <!-- uses the built-in onclick attribute to call the resetBoard function -->
         <button onclick="resetBoard()" type="button" class="btn btn-primary btn-lg" name="button">Restart</button>
       </div>
-      <table>
-        <tr>
+      <table id="x/o-check">
+        <tr id="top-row">
           <!-- the onclick calls a function called "handleClick" and passes itself to it -->
-          <td id='top-left' onclick="handleClick(this)" ></td>
-          <td id='top-middle'></td>
-          <td></td>
+          <td id='top-left' class="left-column" onclick="handleClick(this)" ></td>
+          <td id='top-middle' class="middle-column" onclick="handleClick(this)"></td>
+          <td id="top-right" class="right-column" onclick="handleClick(this)"></td>
+        </tr>
+        <tr id="middle-row">
+          <!-- the onclick calls a function called "handleClick" and passes itself to it -->
+          <td id='middle-left' class="left-column" onclick="handleClick(this)" ></td>
+          <td id='middle-middle' class="middle-column" onclick="handleClick(this)"></td>
+          <td id="middle-right" class="right-column" onclick="handleClick(this)"></td>
+        </tr>
+        <tr id="bottom-row">
+          <!-- the onclick calls a function called "handleClick" and passes itself to it -->
+          <td id='bottom-left' class="left-column" onclick="handleClick(this)" ></td>
+          <td id='bottom-middle' class="middle-column" onclick="handleClick(this)"></td>
+          <td id="bottom-right" class="right-column" onclick="handleClick(this)"></td>
         </tr>
         <!-- @TODO create new rows and cells for the rest of your TTT board. -->
         <!-- @TODO give each new cell an id & an event listener to call the "handleClick" function -->
