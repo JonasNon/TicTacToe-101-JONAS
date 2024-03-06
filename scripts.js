@@ -9,6 +9,7 @@ let winChecker
 let checkSpot
 let winner = ""
 // const tdElements = element.getElementsByTagName('td')
+let squares = document.getElementsByTagName("td")
 
 
 
@@ -32,7 +33,7 @@ const winConditions = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[
 
 const winCheck = () => {
 
-  let squares = document.getElementsByTagName("td")
+  squares = document.getElementsByTagName("td")
   console.log(squares)
   for (i=0; i < 8; i++) {
     let xCount = 0
@@ -147,7 +148,7 @@ const resetBoard = () => {
   for (i=0; i < squares.length; i++) {
 
     // will log out the id of each square as it loops over them.
-    console.log(squares[i].id)
+    // console.log(squares[i].id)
 
     // sets the innerHTML to null to replace the "X" or "O"
     squares[i].innerHTML = null
